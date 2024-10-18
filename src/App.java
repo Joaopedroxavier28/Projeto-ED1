@@ -6,7 +6,7 @@ public class App {
 
     static Scanner scanner = new Scanner(System.in);
 
-    // Mapas para armazenar frequências de eventos, pedidos, locais, datas e doenças
+    
     static Map<String, Integer> eventosCapacidade = new HashMap<>();
     static Map<String, Integer> frequenciaPedidos = new HashMap<>();
     static Map<String, Integer> frequenciaLocais = new HashMap<>();
@@ -28,7 +28,7 @@ public class App {
             System.out.println("0. Sair");
 
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Consumir o newline
+            scanner.nextLine(); 
 
             switch (opcao) {
                 case 1:
@@ -65,7 +65,7 @@ public class App {
             System.out.println("0. Voltar");
 
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Consumir o newline
+            scanner.nextLine(); 
 
             switch (opcao) {
                 case 1:
@@ -132,7 +132,7 @@ public class App {
             System.out.println("0. Voltar");
 
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Consumir o newline
+            scanner.nextLine(); 
 
             switch (opcao) {
                 case 1:
@@ -196,7 +196,7 @@ public class App {
             System.out.println("0. Voltar");
 
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Consumir o newline
+            scanner.nextLine(); 
 
             switch (opcao) {
                 case 1:
