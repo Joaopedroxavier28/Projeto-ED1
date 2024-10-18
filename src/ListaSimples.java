@@ -62,5 +62,6 @@ public class ListaSimples {
             atual = atual.proximo;
         }
     }
+
 }
 

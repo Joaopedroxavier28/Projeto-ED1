@@ -12,5 +12,5 @@ public class Evento {
         this.local = local;
         this.capacidade = capacidade;
         this.proximo = null;
-    }
+    } 
 }

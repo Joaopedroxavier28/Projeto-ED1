@@ -1,8 +1,17 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class App {
 
     static Scanner scanner = new Scanner(System.in);
+
+    // Mapas para armazenar frequências de eventos, pedidos, locais, datas e doenças
+    static Map<String, Integer> eventosCapacidade = new HashMap<>();
+    static Map<String, Integer> frequenciaPedidos = new HashMap<>();
+    static Map<String, Integer> frequenciaLocais = new HashMap<>();
+    static Map<String, Integer> frequenciaDatasConsultas = new HashMap<>();
+    static Map<String, Integer> frequenciaDoencas = new HashMap<>();
 
     public static void main(String[] args) {
         ListaSimples listaPacientes = new ListaSimples();
@@ -15,6 +24,7 @@ public class App {
             System.out.println("1. Gerenciar Clínica Médica");
             System.out.println("2. Gerenciar Restaurante");
             System.out.println("3. Gerenciar Eventos");
+            System.out.println("4. Estatísticas");
             System.out.println("0. Sair");
 
             opcao = scanner.nextInt();
@@ -29,6 +39,9 @@ public class App {
                     break;
                 case 3:
                     menuEventos(listaEventos);
+                    break;
+                case 4:
+                    exibirEstatisticas();
                     break;
                 case 0:
                     System.out.println("Saindo...");
@@ -65,6 +78,11 @@ public class App {
                     String historicoMedico = scanner.nextLine();
                     System.out.print("Última Consulta (yyyy-mm-dd): ");
                     String ultimaConsulta = scanner.nextLine();
+
+                    // Atualizar frequências
+                    frequenciaDatasConsultas.put(ultimaConsulta, frequenciaDatasConsultas.getOrDefault(ultimaConsulta, 0) + 1);
+                    frequenciaDoencas.put(historicoMedico, frequenciaDoencas.getOrDefault(historicoMedico, 0) + 1);
+
                     listaPacientes.inserirPaciente(nome, idade, historicoMedico, ultimaConsulta);
                     break;
                 case 2:
@@ -124,6 +142,10 @@ public class App {
                     int quantidade = scanner.nextInt();
                     System.out.print("Total: ");
                     double total = scanner.nextDouble();
+
+                    // Atualizar frequências
+                    frequenciaPedidos.put(descricao, frequenciaPedidos.getOrDefault(descricao, 0) + 1);
+
                     listaPedidos.inserirPedido(descricao, quantidade, total);
                     break;
                 case 2:
@@ -186,6 +208,11 @@ public class App {
                     String localEvento = scanner.nextLine();
                     System.out.print("Capacidade: ");
                     int capacidade = scanner.nextInt();
+
+                    // Atualizar frequências
+                    frequenciaLocais.put(localEvento, frequenciaLocais.getOrDefault(localEvento, 0) + 1);
+                    eventosCapacidade.put(nomeEvento, capacidade);
+
                     listaEventos.inserirEvento(nomeEvento, dataEvento, localEvento, capacidade);
                     break;
                 case 2:
@@ -213,5 +240,35 @@ public class App {
                     System.out.println("Opção inválida.");
             }
         } while (opcao != 0);
+    }
+
+    // Exibir Estatísticas
+    public static void exibirEstatisticas() {
+        System.out.println("\n--- Estatísticas ---");
+
+        // Evento com maior capacidade
+        String eventoMaiorCapacidade = eventosCapacidade.entrySet().stream()
+                .max(Map.Entry.comparingByValue()).map(Map.Entry::getKey).orElse("Nenhum evento");
+        System.out.println("Evento com maior capacidade: " + eventoMaiorCapacidade);
+
+        // Pedido mais frequente
+        String pedidoMaisFrequente = frequenciaPedidos.entrySet().stream()
+                .max(Map.Entry.comparingByValue()).map(Map.Entry::getKey).orElse("Nenhum pedido");
+        System.out.println("Pedido mais frequente: " + pedidoMaisFrequente);
+
+        // Local mais utilizado para eventos
+        String localMaisUtilizado = frequenciaLocais.entrySet().stream()
+                .max(Map.Entry.comparingByValue()).map(Map.Entry::getKey).orElse("Nenhum local");
+        System.out.println("Local mais utilizado para eventos: " + localMaisUtilizado);
+
+        // Data com mais consultas
+        String dataMaisConsultas = frequenciaDatasConsultas.entrySet().stream()
+                .max(Map.Entry.comparingByValue()).map(Map.Entry::getKey).orElse("Nenhuma data");
+        System.out.println("Data com mais consultas: " + dataMaisConsultas);
+
+        // Doença mais frequente
+        String doencaMaisFrequente = frequenciaDoencas.entrySet().stream()
+                .max(Map.Entry.comparingByValue()).map(Map.Entry::getKey).orElse("Nenhuma doença");
+        System.out.println("Doença mais frequente: " + doencaMaisFrequente);
     }
 }
