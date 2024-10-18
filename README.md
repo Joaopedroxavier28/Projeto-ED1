@@ -1,18 +1,13 @@
-## Getting Started
+Este projeto é uma implementação de três sistemas de gerenciamento, que utilizam diferentes tipos de listas encadeadas para organizar e manipular dados de maneira eficiente. As listas encadeadas escolhidas foram: lista simples, lista duplamente encadeada e lista circular. Cada tipo de lista foi aplicado a um cenário específico: uma clínica médica, um restaurante e um sistema de gerenciamento de eventos. Através de uma interface simples em linha de comando, o usuário pode realizar operações de inserção, remoção, busca e atualização de dados nos três sistemas.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+No sistema de clínica médica, foi utilizada uma lista encadeada simples para gerenciar informações sobre os pacientes. Essas informações incluem nome, idade, histórico médico e data da última consulta. O usuário pode inserir novos pacientes, remover aqueles que não são mais necessários, buscar um paciente específico pelo nome e atualizar a data da última consulta após uma nova visita ao consultório.
 
-## Folder Structure
+O sistema de restaurante é gerenciado por uma lista duplamente encadeada. Essa lista é ideal para manipular pedidos de forma mais flexível, já que cada nó da lista pode apontar tanto para o anterior quanto para o próximo. Nesse sistema, é possível inserir novos pedidos com a descrição dos itens, a quantidade e o total a ser pago, remover pedidos específicos, buscar detalhes de um pedido pelo nome e atualizar os dados de um pedido já existente, caso seja necessário alterar a quantidade ou o valor.
 
-The workspace contains two folders by default, where:
+O terceiro sistema, o de gerenciamento de eventos, faz uso de uma lista circular. A lista circular é adequada para gerenciar dados como eventos e participantes, já que o último elemento da lista aponta de volta para o primeiro, garantindo um ciclo contínuo de informações. Nesse sistema, o usuário pode inserir novos eventos, com nome, data, local e capacidade, remover eventos que já passaram ou não são mais relevantes, buscar eventos específicos pelo nome e exibir todos os eventos cadastrados no sistema.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+A interação com o usuário acontece por meio de menus de texto que permitem a navegação entre os três sistemas e suas respectivas operações. O usuário escolhe o sistema que deseja gerenciar, e então pode realizar operações de acordo com as opções oferecidas em cada menu. Cada módulo do sistema permite o gerenciamento completo dos dados necessários, e todas as informações são manipuladas em tempo real, sem a necessidade de interfaces complexas ou armazenamento externo.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Esse projeto foi desenvolvido em Java e exige que o usuário tenha o Java Development Kit (JDK) instalado para ser executado. O código pode ser compilado e executado através de comandos simples no terminal. A interface de linha de comando é intuitiva e oferece uma boa experiência para quem busca um sistema de gerenciamento baseado em listas encadeadas. Embora o sistema funcione exclusivamente em modo texto, ele pode ser expandido no futuro para incluir uma interface gráfica ou recursos de persistência de dados, como salvamento em arquivos ou integração com banco de dados.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Este projeto é uma solução eficiente para gerenciar dados em diferentes cenários, e demonstra como listas encadeadas podem ser usadas para resolver problemas do mundo real, proporcionando um sistema flexível e funcional.
