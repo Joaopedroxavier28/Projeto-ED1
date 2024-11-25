@@ -1,13 +1,55 @@
-Este projeto é uma implementação de três sistemas de gerenciamento, que utilizam diferentes tipos de listas encadeadas para organizar e manipular dados de maneira eficiente. As listas encadeadas escolhidas foram: lista simples, lista duplamente encadeada e lista circular. Cada tipo de lista foi aplicado a um cenário específico: uma clínica médica, um restaurante e um sistema de gerenciamento de eventos. Através de uma interface simples em linha de comando, o usuário pode realizar operações de inserção, remoção, busca e atualização de dados nos três sistemas.
+Sistema de Gerenciamento de Clínica, Eventos e Restaurante
+Descrição do Projeto
+Este projeto implementa um sistema modular de gerenciamento para três cenários distintos: clínica médica, eventos e restaurante. Cada cenário utiliza estruturas de dados avançadas (pilhas, filas e árvores binárias) para organizar, buscar e manipular informações, oferecendo um gerenciamento eficiente e organizado.
 
-No sistema de clínica médica, foi utilizada uma lista encadeada simples para gerenciar informações sobre os pacientes. Essas informações incluem nome, idade, histórico médico e data da última consulta. O usuário pode inserir novos pacientes, remover aqueles que não são mais necessários, buscar um paciente específico pelo nome e atualizar a data da última consulta após uma nova visita ao consultório.
+Além disso, há uma funcionalidade de Perguntas Frequentes, onde o sistema apresenta perguntas estratégicas pré-definidas para os três cenários. Essa funcionalidade está estruturada, mas sem dados processados, deixando espaço para futuras implementações.
 
-O sistema de restaurante é gerenciado por uma lista duplamente encadeada. Essa lista é ideal para manipular pedidos de forma mais flexível, já que cada nó da lista pode apontar tanto para o anterior quanto para o próximo. Nesse sistema, é possível inserir novos pedidos com a descrição dos itens, a quantidade e o total a ser pago, remover pedidos específicos, buscar detalhes de um pedido pelo nome e atualizar os dados de um pedido já existente, caso seja necessário alterar a quantidade ou o valor.
+Funcionalidades
+Gerenciamento da Clínica Médica:
 
-O terceiro sistema, o de gerenciamento de eventos, faz uso de uma lista circular. A lista circular é adequada para gerenciar dados como eventos e participantes, já que o último elemento da lista aponta de volta para o primeiro, garantindo um ciclo contínuo de informações. Nesse sistema, o usuário pode inserir novos eventos, com nome, data, local e capacidade, remover eventos que já passaram ou não são mais relevantes, buscar eventos específicos pelo nome e exibir todos os eventos cadastrados no sistema.
+Fila: Organiza pacientes em ordem de chegada para situações emergenciais.
+Pilha: Registra o histórico de ações dos pacientes.
+Árvore Binária: Facilita a busca por médicos com base em especialidades.
+Gerenciamento de Eventos:
 
-A interação com o usuário acontece por meio de menus de texto que permitem a navegação entre os três sistemas e suas respectivas operações. O usuário escolhe o sistema que deseja gerenciar, e então pode realizar operações de acordo com as opções oferecidas em cada menu. Cada módulo do sistema permite o gerenciamento completo dos dados necessários, e todas as informações são manipuladas em tempo real, sem a necessidade de interfaces complexas ou armazenamento externo.
+Fila: Gerencia inscrições de participantes (com validação de idade para menores de 18 anos).
+Pilha: Histórico de eventos consultados.
+Árvore Binária: Facilita a busca por palestrantes.
+Gerenciamento de Restaurante:
 
-Esse projeto foi desenvolvido em Java e exige que o usuário tenha o Java Development Kit (JDK) instalado para ser executado. O código pode ser compilado e executado através de comandos simples no terminal. A interface de linha de comando é intuitiva e oferece uma boa experiência para quem busca um sistema de gerenciamento baseado em listas encadeadas. Embora o sistema funcione exclusivamente em modo texto, ele pode ser expandido no futuro para incluir uma interface gráfica ou recursos de persistência de dados, como salvamento em arquivos ou integração com banco de dados.
+Fila: Organiza pedidos com base no tempo de preparo.
+Pilha: Armazena o histórico de modificações nos pedidos.
+Árvore Binária: Permite consulta rápida de itens do menu e sua popularidade.
+Perguntas Frequentes:
 
-Este projeto é uma solução eficiente para gerenciar dados em diferentes cenários, e demonstra como listas encadeadas podem ser usadas para resolver problemas do mundo real, proporcionando um sistema flexível e funcional.
+Médico mais procurado.
+Palestrante mais procurado.
+Idade mais comum.
+Alimento mais pedido.
+Modificação mais comum.
+Inclui opção de voltar ao menu principal
+Estruturas de Dados Utilizadas
+Pilha (Stack):
+Gerencia o histórico de ações e consultas realizadas.
+Fila (Queue):
+Organiza elementos em ordem de chegada ou prioridade.
+Árvore Binária de Busca (BinarySearchTree):
+Facilita a organização e busca eficiente de dados.
+
+SISTEMA DE GERENCIAMENTO
+![Captura de tela 2024-11-25 091248](https://github.com/user-attachments/assets/fcf80e5c-0ed3-45de-8fd1-a7cbe5f9a260)
+
+GERENCIAMENTO CLINICA
+![Captura de tela 2024-11-25 091307](https://github.com/user-attachments/assets/a76e0323-a43a-4b79-8263-497b49ec4dfe)
+
+SISTEMA DE EVENTOS
+![Captura de tela 2024-11-25 091321](https://github.com/user-attachments/assets/35c68517-c1eb-44a1-80ec-81fcae21eb21)
+
+SISTEMA RESTAURANTE
+![Captura de tela 2024-11-25 091341](https://github.com/user-attachments/assets/d7126b50-1778-4169-a5ab-d67e252ca161)
+
+PERGUNTAS FREQUENTÊTES
+![Captura de tela 2024-11-25 091354](https://github.com/user-attachments/assets/38e6b65f-ca9f-4975-8bb6-5b14c87feb6f)
+
+
+
