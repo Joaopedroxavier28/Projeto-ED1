@@ -33,8 +33,18 @@ Pilha (Stack):
 Gerencia o histórico de ações e consultas realizadas.
 Fila (Queue):
 Organiza elementos em ordem de chegada ou prioridade.
-Árvore Binária de Busca (BinarySearchTree):
+Árvore Binária de Busca:
 Facilita a organização e busca eficiente de dados.
+Sistema de Eventos
+Pilha: Armazena o histórico de eventos consultados pelo usuário.
+Fila: Adiciona inscrições de participantes. Caso o participante tenha menos de 18 anos, é emitido um aviso de autorização obrigatória:
+"Acesse o documento de autorização no site: unicapeventos.com.br"
+Árvore Binária de Busca: Organiza os participantes por nome e número de inscrição.
+Gestão de Restaurante
+Pilha: Gerencia o histórico de alterações em pedidos.
+Fila: Gerencia os pedidos por ordem de chegada, priorizando itens que demoram menos para serem preparados.
+Árvore Binária de Busca: Organiza os itens do menu, permitindo consultar a popularidade.
+
 
 SISTEMA DE GERENCIAMENTO
 ![Captura de tela 2024-11-25 091248](https://github.com/user-attachments/assets/fcf80e5c-0ed3-45de-8fd1-a7cbe5f9a260)
